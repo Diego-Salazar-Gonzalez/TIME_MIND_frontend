@@ -1,0 +1,109 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts//variables" as v;
+
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(v.$negro, $alpha: 0.5);
+  width: auto;
+  display: grid;
+  align-items: center;
+ 
+  box-sizing: border-box;
+  height: 115vh;
+  @include m.tablet{
+    height: 100vh;
+  }
+
+  &__cerrar {
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 7rem;
+      cursor: pointer;
+      transition-property: background-color;
+      transition-duration: 300ms;
+      border-radius: 50%;
+      &:hover {
+        background-color: v.$celeste-oscuro;
+      }
+    }
+  }
+
+  &__formulario {
+    display: grid;
+    justify-items: center;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in;
+    opacity: 0;
+    
+    .alerta-error {
+      font-size: 2rem;
+    }
+    form {
+      background-color: v.$gris-oscuro;
+      padding: 3rem;
+      border-radius: 1rem;
+      margin-bottom: 15rem;
+      @include m.tablet{
+        margin-bottom: 0;
+      }
+    }
+    label {
+      font-weight: bold;
+      font-family: v.$fuentePrincipal;
+      font-size: 3rem;
+      color: v.$azul-claro;
+    }
+
+    input {
+      width: 30rem;
+      height: 3rem;
+      border-radius: 0.5rem;
+      border: none;
+      background-color: v.$blanco;
+      font-size: 2rem;
+    }
+    &--submit {
+      text-align: center;
+      font-family: v.$fuentePrincipal;
+    }
+    input[type="submit"] {
+      text-align: center;
+      width: 15rem;
+      margin: 1rem;
+      transition-property: all;
+      transition-duration: 300ms;
+      &:hover {
+        cursor: pointer;
+        background-color: v.$celeste-oscuro;
+        color: v.$blanco;
+      }
+    }
+    &--animar {
+      opacity: 1;
+    }
+    &--tarea {
+      display: grid;
+    }
+
+    &--tiempo {
+      display: grid;
+    }
+    &--descripcion {
+      display: grid;
+      font-size: 2rem;
+
+      textarea {
+        border-radius: 0.5rem;
+        resize: none;
+      }
+    }
+  }
+}

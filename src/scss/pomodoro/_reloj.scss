@@ -1,0 +1,56 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts//variables" as v;
+.pomodoro {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+      padding: 1rem;
+      span {
+        color: v.$celeste-oscuro;
+      }
+    }
+  }
+  &__opciones {
+    margin: 0;
+    text-align: end;
+    margin: 0 1rem 0 0;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &__timer {
+    width: 40rem;
+    margin: 0 auto;
+  }
+
+  &__botones {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 0 auto;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.flamas {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.CircularProgressbar {
+  .CircularProgressbar-path {
+    stroke: v.$celeste-oscuro;
+  }
+  .CircularProgressbar-text {
+    fill: v.$celeste-oscuro;
+  }
+}

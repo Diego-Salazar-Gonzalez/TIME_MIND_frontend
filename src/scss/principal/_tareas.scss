@@ -1,0 +1,52 @@
+@use "../abstracts/mixins" as m;
+@use "../abstracts//variables" as v;
+
+.tareas {
+    overflow-y: hidden;
+
+    
+    @include m.tablet{
+        overflow-y: scroll;
+    }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &--boton{
+        display: flex;
+        align-items: center;
+        img {
+            margin: 3rem 1rem 3rem 1rem;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        p{
+            font-weight: bold;
+            font-size: 1.5rem;
+            font-family: v.$fuentePrincipal;
+        }
+    }
+    
+    h2{
+        margin: 0 3rem 0 ;
+        font-family: v.$fuentePrincipal;
+        font-size: 2rem;
+    }
+    span{
+        color: v.$azul-claro;
+    }
+  }
+  &__lista{
+    h2{
+        margin: 0;
+        margin-left: 2rem;
+        font-family: v.$fuentePrincipal;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+  }
+}

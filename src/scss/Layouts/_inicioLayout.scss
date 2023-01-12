@@ -1,0 +1,63 @@
+@use '../abstracts/mixins' as m;
+@use '../abstracts//variables' as v;
+.contenedor-principal{
+    word-wrap: break-word;
+    @include m.tablet{
+        display: flex;
+        min-height: 100vh;
+        overflow: auto;
+    }
+
+    &__barra{
+        background-color: v.$azul-claro;
+        padding: 3rem 1rem 2rem 1rem;
+
+        
+        h2{
+            font-family: v.$fuentePrincipal;
+            font-weight: bold;
+            text-align: center;
+            font-size: 4rem;
+            color: v.$blanco;
+           margin: 0;
+           
+        }
+        nav{
+            margin: 1rem;
+            display: grid;
+            justify-items: start;
+            gap: 2rem;
+        }
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+            text-align: center;
+            color: v.$blanco;
+            transition: all;
+            transition-duration: 300ms;
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+
+            &:hover{
+                background-color: v.$celeste-oscuro;
+                color: v.$gris;
+            }
+        }
+
+        @include m.tablet{
+            width: 25%;
+        }
+    }
+
+    &__contenido{
+
+        display: grid;
+        
+
+        @include m.tablet{
+            height: 100vh;
+            width: 75%;
+        }
+    }
+}

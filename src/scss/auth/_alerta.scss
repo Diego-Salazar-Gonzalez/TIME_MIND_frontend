@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.alerta {
+  &-error {
+    @include m.alerta;
+    background: rgb(240, 18, 18);
+    background: radial-gradient(
+      circle,
+      rgba(240, 18, 18, 1) 4%,
+      rgba(255, 106, 106, 0.835171568627451) 86%
+    );
+  }
+  &-exito {
+    @include m.alerta;
+    background: rgb(64, 180, 219);
+    background: radial-gradient(
+      circle,
+      rgba(64, 180, 219, 1) 45%,
+      rgba(58, 147, 242, 1) 76%
+    );
+  }
+}
