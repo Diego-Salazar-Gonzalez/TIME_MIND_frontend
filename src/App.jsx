@@ -6,7 +6,7 @@ import RecuperarCuenta from './pages/RecuperarCuenta';
 import InicioLayout from './layout/InicioLayout';
 import Tareas from './pages/principal/Tareas';
 import { AuthProvider } from './context/AuthProvider';
-import { TareasProvider } from `./context/tareasProvider`;
+import { TareasProvider } from './context/TareasProvider';
 import Perfil from './pages/principal/Perfil';
 function App() {
  
