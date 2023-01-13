@@ -1,6 +1,5 @@
 import { useContext } from "react";
-import TareasContext from "../context/tareasProvider";
-
+import TareasContext from '../context/TareasProvider';
 const useTareas = () =>{
     return useContext(TareasContext)
 }
